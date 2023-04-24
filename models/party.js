@@ -11,11 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Party.belongsTo(models.Table, {
+        foreignKey: 'tableId',
+        onDelete: 'CASCADE'
+      });
+
     }
   }
   Party.init({
     numberOfAdults: DataTypes.INTEGER,
-    numberOfChildren: DataTypes.INTEGER
+    numberOfChildren: DataTypes.INTEGER,
+    tableId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Party',

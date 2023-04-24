@@ -15,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Dish.init({
     name: DataTypes.STRING,
+    description: DataTypes.STRING,
     isGlutenFree: DataTypes.BOOLEAN,
     isSpicy: DataTypes.BOOLEAN
   }, {

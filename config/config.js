@@ -3,7 +3,7 @@ module.exports = {
   "development": {
     "username": process.env.DEVELOPMENT_DATABASE_USER,
     "password": null,
-    "database": "restaurant_database",
+    "database": process.env.DEVELOPMENT_DATABASE,
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
