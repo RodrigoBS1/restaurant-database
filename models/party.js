@@ -15,7 +15,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'tableId',
         onDelete: 'CASCADE'
       });
-
     }
   }
   Party.init({
