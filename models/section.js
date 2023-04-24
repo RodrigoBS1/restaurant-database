@@ -11,10 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Section.hasMany(models.Table, {
+        foreignKey: 'tableId',
+        onDelete: 'CASCADE'
+      })
     }
   }
   Section.init({
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    tableId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Section',
