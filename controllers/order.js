@@ -1,25 +1,32 @@
 const Order = require("../models").Order;
 const Party = require("../models").Party;
+const Dish = require("../models").Dish;
 
 module.exports = {
-  list(req, res) { // show all orders
+  list(req, res) {
+    // show all orders
     return Order.findAll({
-      include: [
-        {
-          model: Party,
-          as: "parties",
-        }
-      ],
-      order: [
-        ["createdAt", "DESC"],
-        [{ model: Party, as: "parties" }, "createdAt", "DESC"],
-      ],
+      // include: [
+      //   {
+      //     model: Party,
+      //     as: "parties",
+      //   },
+      //   {
+      //     model: Dish,
+      //     as: "dishes",
+      //   },
+      // ],
+      // order: [
+      //   ["createdAt", "DESC"],
+      //   [{ model: Party, as: "parties" }, "createdAt", "DESC"],
+      // ],
     })
       .then((orders) => res.status(200).send(orders))
       .catch((error) => res.status(400).send(error));
   },
 
-  add(req, res) { // add a new order
+  add(req, res) {
+    // add a new order
     return Order.create({
       partyId: req.body.partyId,
       dishId: req.body.dishId,
@@ -28,7 +35,8 @@ module.exports = {
       .catch((error) => res.status(400).send(error));
   },
 
-  getById(req, res) { // get an order by ID
+  getById(req, res) {
+    // get an order by ID
     return Order.findByPk(req.params.id, {
       include: [
         {

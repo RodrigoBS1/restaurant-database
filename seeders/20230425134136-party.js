@@ -6,17 +6,23 @@ module.exports = {
     await queryInterface.bulkInsert('Parties', [{
        numberOfAdults: 3,
        numberOfChildren: 3,
-       tableId: 1
+       tableId: 1,
+       createdAt: new Date(),
+       updatedAt: new Date()
      },
      {
       numberOfAdults: 1,
       numberOfChildren: 1,
-      tableId: 2
+      tableId: 2,
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
       numberOfAdults: 4,
       numberOfChildren: 0,
-      tableId: 3
+      tableId: 3,
+      createdAt: new Date(),
+      updatedAt: new Date()
     }], {});
   },
 

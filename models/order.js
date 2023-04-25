@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Order.belongsTo(models.Party, {
+      Order.hasOne(models.Party, {
         foreignKey: 'partyId',
         onDelete: 'CASCADE'
       }),
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Order.init({
     partyId: DataTypes.INTEGER,
-    dishId: DataTypes.INTEGER,
+    dishId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Order',

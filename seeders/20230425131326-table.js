@@ -5,12 +5,18 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Tables', [{
       isOpen: false,
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
       isOpen: false,
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
       isOpen: false,
+      createdAt: new Date(),
+      updatedAt: new Date()
     }], {});
   },
 
