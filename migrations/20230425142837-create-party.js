@@ -15,6 +15,9 @@ module.exports = {
       numberOfChildren: {
         type: Sequelize.INTEGER
       },
+      tableId: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

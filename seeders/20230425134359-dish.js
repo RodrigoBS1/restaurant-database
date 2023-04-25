@@ -7,19 +7,25 @@ module.exports = {
       name: "Grilled Salmon",
       description: "Delicious salmon seasoned with herbs and lemon. Served with a side of roasted vegetables.",
       isGlutenFree: true,
-      isSpicy: false
+      isSpicy: false,
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
       name: "Spicy Tofu Stir Fry",
       description: "Stir-fried tofu, mixed vegetables, and spicy sauce. Served with brown rice.",
       isGlutenFree: true,
-      isSpicy: true
+      isSpicy: true,
+      createdAt: new Date(),
+      updatedAt: new Date()
     },
     {
       name: "Beef Stroganoff",
       description: "Tender strips of beef cooked in a creamy mushroom sauce. Served over egg noodles.",
       isGlutenFree: false,
-      isSpicy: false
+      isSpicy: false,
+      createdAt: new Date(),
+      updatedAt: new Date()
     }], {});
   },
 

@@ -11,10 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Party.belongsTo(models.Table, {
-        foreignKey: 'tableId',
-        onDelete: 'CASCADE'
-      });
     }
   }
   Party.init({

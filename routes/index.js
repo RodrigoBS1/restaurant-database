@@ -15,3 +15,10 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+
+// npx sequelize-cli model:generate --name Table --attributes isOpen:boolean
+// npx sequelize-cli model:generate --name Party --attributes numberOfAdults:integer,numberOfChildren:integer,tableId:integer
+// npx sequelize-cli model:generate --name Section --attributes name:string,tableId:integer
+// npx sequelize-cli model:generate --name Employee --attributes name:string,sectionId:integer
+// npx sequelize-cli model:generate --name Dish --attributes name:string,description:string,isGlutenFree:boolean,isSpicy:boolean
+// npx sequelize-cli model:generate --name Order --attributes partyId:integer,dishId:integer
