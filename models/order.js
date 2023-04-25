@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Order.belongsTo(models.Party, {
         foreignKey: 'partyId',
-
+        onDelete: 'CASCADE'
       }),
       Order.hasMany(models.Dish, {
         foreignKey: 'dishId',
-        
+        onDelete: 'CASCADE'
       })
     }
   }
