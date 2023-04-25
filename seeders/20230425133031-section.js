@@ -3,18 +3,18 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Tables', [{
-      isOpen: false,
+    await queryInterface.bulkInsert('FrontSectionTables', [{
+      tableId: 1,
     },
     {
-      isOpen: false,
-    },
+      tableId: 2,
+    }, 
     {
-      isOpen: false,
+      tableId: 3,
     }], {});
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Tables', null, {})
+    await queryInterface.bulkDelete('FrontSectionTables', null, {}); 
   }
 };
